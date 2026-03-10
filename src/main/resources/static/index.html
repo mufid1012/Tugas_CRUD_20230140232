@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Data KTP</title>
+    <meta name="description" content="Aplikasi CRUD Data KTP menggunakan Spring Boot dan jQuery">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Notification -->
+    <div id="notification" class="notification hidden">
+        <span id="notification-message"></span>
+        <button class="notification-close" onclick="hideNotification()">&times;</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Manajemen Data KTP</h1>
+            <p class="subtitle">Sistem Pengelolaan Kartu Tanda Penduduk</p>
+        </header>
+
+        <!-- Form Section -->
+        <section class="card form-section">
+            <h2 id="form-title">Tambah Data KTP</h2>
+            <form id="ktp-form">
+                <input type="hidden" id="ktp-id">
+
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="nomorKtp">Nomor KTP</label>
+                        <input type="text" id="nomorKtp" placeholder="Masukkan 16 digit nomor KTP" maxlength="16"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="namaLengkap">Nama Lengkap</label>
+                        <input type="text" id="namaLengkap" placeholder="Masukkan nama lengkap" required>
+                    </div>
+
+                    <div class="form-group full-width">
+                        <label for="alamat">Alamat</label>
+                        <input type="text" id="alamat" placeholder="Masukkan alamat lengkap" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tanggalLahir">Tanggal Lahir</label>
+                        <input type="date" id="tanggalLahir" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="jenisKelamin">Jenis Kelamin</label>
+                        <select id="jenisKelamin" required>
+                            <option value="">-- Pilih Jenis Kelamin --</option>
+                            <option value="Laki-laki">Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="btn-submit">Simpan Data</button>
+                    <button type="button" class="btn btn-secondary" id="btn-cancel" onclick="resetForm()"
+                        style="display:none;">Batal</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Table Section -->
+        <section class="card table-section">
+            <div class="table-header">
+                <h2>Daftar Data KTP</h2>
+                <button class="btn btn-outline" onclick="loadData()">Refresh</button>
+            </div>
+
+            <div class="table-wrapper">
+                <table id="ktp-table">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nomor KTP</th>
+                            <th>Nama Lengkap</th>
+                            <th>Alamat</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ktp-tbody">
+                        <tr>
+                            <td colspan="7" class="empty-state">Memuat data...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
