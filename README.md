@@ -33,7 +33,7 @@ Content-Type: application/json
 ```json
 {
     "nomorKtp": "3201234567890001",
-    "namaLengkap": "Budi Santoso",
+    "namaLengkap": "Ilham Subianto",
     "alamat": "Jl. Merdeka No. 10, Jakarta",
     "tanggalLahir": "1990-05-15",
     "jenisKelamin": "Laki-laki"
@@ -48,7 +48,7 @@ Content-Type: application/json
     "data": {
         "id": 1,
         "nomorKtp": "3201234567890001",
-        "namaLengkap": "Budi Santoso",
+        "namaLengkap": "Ilham Subianto",
         "alamat": "Jl. Merdeka No. 10, Jakarta",
         "tanggalLahir": "1990-05-15",
         "jenisKelamin": "Laki-laki"
@@ -73,7 +73,7 @@ GET /ktp
         {
             "id": 1,
             "nomorKtp": "3201234567890001",
-            "namaLengkap": "Budi Santoso",
+            "namaLengkap": "Ilham Subianto",
             "alamat": "Jl. Merdeka No. 10, Jakarta",
             "tanggalLahir": "1990-05-15",
             "jenisKelamin": "Laki-laki"
@@ -98,7 +98,7 @@ GET /ktp/{id}
     "data": {
         "id": 1,
         "nomorKtp": "3201234567890001",
-        "namaLengkap": "Budi Santoso",
+        "namaLengkap": "Ilham Subianto",
         "alamat": "Jl. Merdeka No. 10, Jakarta",
         "tanggalLahir": "1990-05-15",
         "jenisKelamin": "Laki-laki"
@@ -119,7 +119,7 @@ Content-Type: application/json
 ```json
 {
     "nomorKtp": "3201234567890001",
-    "namaLengkap": "Budi Santoso Updated",
+    "namaLengkap": "Ilham Subianto Updated",
     "alamat": "Jl. Sudirman No. 20, Jakarta",
     "tanggalLahir": "1990-05-15",
     "jenisKelamin": "Laki-laki"
