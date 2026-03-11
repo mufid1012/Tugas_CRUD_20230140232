@@ -1,86 +1,10 @@
-# CRUD KTP — Spring Boot & jQuery
-
-Aplikasi CRUD (Create, Read, Update, Delete) untuk manajemen data **Kartu Tanda Penduduk (KTP)** menggunakan **Spring Boot** (backend) dan **HTML/CSS/jQuery Ajax** (frontend).
+# CRUD KTP — SISTEM MANAJEMEN DATA KTP
 
 ---
 
-## Teknologi
+## TAMPILAN WEBSITE
 
-| Layer    | Teknologi                          |
-|----------|------------------------------------|
-| Backend  | Spring Boot 3.2, Spring Data JPA   |
-| Database | MySQL (schema: `spring`)           |
-| Frontend | HTML5, CSS3, JavaScript, jQuery    |
-
----
-
-## Struktur Proyek
-
-```
-src/
-├── main/
-│   ├── java/com/example/ktp/
-│   │   ├── KtpApplication.java              # Main class
-│   │   ├── controller/
-│   │   │   └── KtpController.java           # REST Controller
-│   │   ├── dto/
-│   │   │   ├── KtpRequestDto.java           # Request DTO
-│   │   │   └── KtpResponseDto.java          # Response DTO
-│   │   ├── entity/
-│   │   │   └── Ktp.java                     # JPA Entity
-│   │   ├── exception/
-│   │   │   ├── DuplicateResourceException.java
-│   │   │   ├── GlobalExceptionHandler.java
-│   │   │   └── ResourceNotFoundException.java
-│   │   ├── mapper/
-│   │   │   └── KtpMapper.java               # Entity <-> DTO Mapper
-│   │   ├── repository/
-│   │   │   └── KtpRepository.java           # Data Access Layer
-│   │   ├── service/
-│   │   │   ├── KtpService.java              # Service Interface
-│   │   │   └── impl/
-│   │   │       └── KtpServiceImpl.java      # Service Implementation
-│   │   └── util/
-│   │       └── ApiResponse.java             # Generic API Response
-│   └── resources/
-│       ├── application.properties           # Konfigurasi database
-│       └── static/
-│           ├── index.html                   # Halaman web
-│           ├── style.css                    # Styling
-│           └── app.js                       # jQuery Ajax
-```
-
----
-
-## Persiapan
-
-### 1. Database MySQL
-
-Buat database `spring` di MySQL:
-
-```sql
-CREATE DATABASE IF NOT EXISTS spring;
-```
-
-> Tabel `ktp` akan otomatis dibuat oleh Hibernate saat aplikasi pertama kali dijalankan.
-
-### 2. Konfigurasi Database
-
-Edit file `src/main/resources/application.properties` sesuai kredensial MySQL Anda:
-
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/spring
-spring.datasource.username=root
-spring.datasource.password=
-```
-
-### 3. Menjalankan Aplikasi
-
-```bash
-./mvnw spring-boot:run
-```
-
-Buka browser di **http://localhost:8080**
+<img width="1290" height="902" alt="image" src="https://github.com/user-attachments/assets/cdbda2e8-fe29-4b35-96a3-58f8de6c1dd0" />
 
 ---
 
